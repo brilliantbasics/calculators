@@ -67,5 +67,5 @@ WashCostApp::Application.routes.draw do
 
   match '/clean_session', :controller => 'application', :action => 'clean_session'
 
-  root :to => "home#index"
+  root :to => "pages#marketing_info"
 end
