@@ -9,4 +9,8 @@ class PagesController < HighVoltage::PagesController
 		render :layout => false, template: "pages/marketing_info.html.erb"
 	end
 
+	def mobile
+		render :layout => false, template: "pages/mobile.html.erb"
+	end
+
 end

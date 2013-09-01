@@ -1,23 +1,33 @@
+html,
 body {
-	margin-top: 0;
+   margin:0;
+   padding:0;
+   height:100%;
+}
+body {
+	
 	font-family: Helvetica, Arial, sans-serif;
 	color: white;
 	background: #b1a172;
-	background: url(<%=asset_path "static/marketingbg.png"%>) no-repeat center center fixed; 
-  	
+	background: url(../img/marketingbg.png) no-repeat center center fixed;  	
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-  	/*IE filters*/
-  	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/marketingbg.png', sizingMethod='scale');
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/marketingbg.png', sizingMethod='scale')";
-
+  	
 }
+
 a:link, a:visited {
 	text-decoration: none;
 	color: white;
 }
+
+#wrapper {
+	min-height:100%;
+   	position:relative;
+   	
+}
+
 #header {
 	top:0px;
 	background-color: #333;
@@ -40,8 +50,7 @@ a:link, a:visited {
 	    border-radius: 2px;	   	
 	  	margin-top: 14px;
 	  	position: absolute;
-	  	margin-left: -15%;
-	  	
+	  	margin-left: -15%;	  	
 		}
 		#h-trybutton:hover {
 			background-color: #f2662e;
@@ -52,16 +61,15 @@ a:link, a:visited {
 		}
 
 #content {
-	margin-top: 90px;
-	padding-top: 0em;
-	width: 800px;
-	display: block;
+	margin-top: 100px;
+	width: 800px;	
 	margin-right: auto;
 	margin-left: auto;
-
+	min-height: 1000px;	
+	
 	/*text shadows*/	
 	text-shadow: 0px 0px 10px rgba(59, 41, 41, 0.25);
-    filter: dropshadow(color=#3b2929, offx=0, offy=0);
+    
 	}
 	h1 {
 		font-size: 3.5em;
@@ -77,6 +85,7 @@ a:link, a:visited {
 	#button-wrapper {
 		text-align: center;
 		white-space: nowrap;
+		z-index: -1;
 		}
 		#learnmore, #c-trybutton {
 			display: inline-block;
@@ -96,15 +105,16 @@ a:link, a:visited {
 		}
 
 #footer {
+	position: absolute;
+	bottom:0;
 	width: 100%;
 	height: 125px;
-	margin-top: 150px;
 	background-color: #ccc394;
 	border-top: solid 1px white;
 	text-align: center;
 	padding-top: 20px;
 	font-size: 1em;
-	
+
 	}
 	#footer a:hover {
 		color:#ede9d8;
@@ -114,8 +124,7 @@ a:link, a:visited {
 		text-align: left;
 		float: left;
 		margin-left: 15%;
-		font-size: 1em;
-		
+		font-size: 1em;		
 	}
 	
 	#button-wrapper {

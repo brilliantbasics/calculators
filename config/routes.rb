@@ -60,6 +60,7 @@ WashCostApp::Application.routes.draw do
 
   match '/infographic' => 'pages#infographic', as: :static
   match '/marketing_info' => 'pages#marketing_info', as: :static
+  match '/mobile' => 'pages#mobile', as: :static
   match '/cal' => 'home#index'
 
   get "/path" => "controller#get_action"
