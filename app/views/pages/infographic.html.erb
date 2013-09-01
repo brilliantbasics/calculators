@@ -2,20 +2,20 @@
 <html>
 <head>	
 	<!--Modernizr -->
-	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href=<%=asset_path "static/normalize.css"%> type="text/css">
 	<script type="text/javascript" src="http://modernizr.com/downloads/modernizr-latest.js"></script>
  	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,700italic,300italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/styleSF.css" type="text/css">
+	<link rel="stylesheet" href=<%=asset_path "static/styleSF.css"%> type="text/css">
 
 	<!-- JS asset loading screen and gif -->
 	<script type="text/javascript">
-	document.write('<div id="loader" style="display:table; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; background-color: #b1a172; background: url(img/loadbg.jpg) no-repeat center center fixed; -webkit-background-size: cover;	-moz-background-size: cover; -o-background-size: cover;	background-size: cover;">'
+	document.write('<div id="loader" style="display:table; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10000; background-color: #b1a172; background: url(<%=asset_path "static/loadbg.jpg"%>) no-repeat center center fixed; -webkit-background-size: cover;	-moz-background-size: cover; -o-background-size: cover;	background-size: cover;">'
     	+ '<div style="display:table-cell; vertical-align:middle; text-align: center;">'
-    	+ '<img style="margin-bottom:20px;" src="img/pngs/WClong.png" /><br>'
-    	+ '<img src="img/loader.gif" />'
+    	+ '<img style="margin-bottom:20px;" src=<%=asset_path "static/WClong.png"%> /><br>'
+    	+ '<img src=<%asset_path "static/loader.gif"%> />'
     	+ '</div></div>');
 	</script>
 	
@@ -25,10 +25,10 @@
 	<a name='sec1'></a>
 	<div id='play-wrapper'>
 		<div id='autoplay-wrapper' style='display:none'>
-			<div id='playbutton'><img src="img/pngs/play.png"></div><div class='autotxt'>autoplay</div>
+			<div id='playbutton'><img src=<%=asset_path "static/pngs/play.png"%>></div><div class='autotxt'>autoplay</div>
 		</div>
 		<div id='pause-wrapper' style='display:none'>
-			<div id='playbutton'><img src="img/pngs/pause.png"></div><div class='autotxt'>pause</div>
+			<div id='playbutton'><img src=<%=asset_path "static/pngs/pause.png"%>></div><div class='autotxt'>pause</div>
 		</div>
 	</div>
 	<div id="navbar">
@@ -41,13 +41,13 @@
 	</div>
 	<!-- Background image -->
 	<div id="BG" class="bgdiv">
-		<img id='small' src="img/small.jpg">
-		<img id='medium' src="img/medium.jpg">
-		<img id='large' src="img/large.jpg">
+		<img id='small' src=<%=asset_path "static/small.jpg"%>>
+		<img id='medium' src=<%=asset_path "static/medium.jpg"%>>
+		<img id='large' src=<%=asset_path "static/large.jpg"%>>
 	</div>
 	<div id='learnmore'>
 			<div>Learn More</div>
-			<img src="img/pngs/downarrow.png">
+			<img src=<%=asset_path "static/pngs/downarrow.png"%>>
 	</div>	
 	<!-- Problem section -->		
 		<div id="inadequate-access" class="">
@@ -64,7 +64,7 @@
 			drinking water 
 		</div>		
  		<div id="peopleRows">				
-				<img src="img/pngs/seveneighty.png">
+				<img src=<%=asset_path "static/pngs/seveneighty.png"%>>
 				</div>
 		<div class='spacer'></div>
 		<div id="sanitation" class="">
@@ -75,7 +75,7 @@
 			sanitation 
 		</div>		
 		<div id="peopleRows2" class="">
-				<img src="img/pngs/twofive.png">
+				<img src=<%=asset_path "static/pngs/twofive.png"%>>
 		</div> 
 		<div class='spacer'></div>
 		<div id='tackle-wrapper'>
@@ -89,10 +89,10 @@
 				WASH in 2012
 			</div>
 			<div id='dollars' class="">
-				<img src="img/pngs/dollar.png" ><img src="img/pngs/dollar.png" ><br>
-				<img src="img/pngs/dollar.png" ><img src="img/pngs/dollar.png" ><br>
-				<img src="img/pngs/dollar.png" ><img src="img/pngs/dollar.png" ><br>
-				<img src="img/pngs/dollar.png" ><img src="img/pngs/dollar.png" ><br>
+				<img src=<%=asset_path "static/pngs/dollar.png"%> ><img src=<%=asset_path "static/pngs/dollar.png"%> ><br>
+				<img src=<%=asset_path "static/pngs/dollar.png"%> ><img src=<%=asset_path "static/pngs/dollar.png"%> ><br>
+				<img src=<%=asset_path "static/pngs/dollar.png"%> ><img src=<%=asset_path "static/pngs/dollar.png"%> ><br>
+				<img src=<%=asset_path "static/pngs/dollar.png"%> ><img src=<%=asset_path "static/pngs/dollar.png"%> ><br>
 			</div>
 		</div>
 		<div class='spacer'></div>
@@ -104,15 +104,15 @@
 				 budgeted for long-<br>
 				 term maintenance and<br>
 				 financing
-			</div><img id='halfdollar' src="img/pngs/halfdollar.png">
+			</div><img id='halfdollar' src=<%=asset_path "static/pngs/halfdollar.png"%>>
 		</div>
 		<div class='spacer'></div>
 		<div class='spacer'></div>
 		<div class='spacer'></div>
 		<div class='spacer'></div>
 		<div id='droplets'>
-			<img id='dirtydroplet' src="img/pngs/dirtydroplet.png">
-			<img src="img/pngs/droplet.png">
+			<img id='dirtydroplet' src=<%=asset_path "static/pngs/dirtydroplet.png"%>>
+			<img src=<%=asset_path "static/pngs/droplet.png"%>>
 		</div>
 		<div id='failure' class=''>
 			Therefore, projects<br>
@@ -179,12 +179,12 @@
 		</div>
 		<div id='pie-wrapper'>
 		<div id='pie'>
-			<img id='pie1' src="img/pngs/pie1.png">
-			<img id='pie2' src="img/pngs/pie2.png">
-			<img id='pie3' src="img/pngs/pie3.png">
-			<img id='pie4' src="img/pngs/pie4.png">
-			<img id='pie5' src="img/pngs/pie5.png">
-			<img id='pie6' src="img/pngs/pie6.png">
+			<img id='pie1' src=<%=asset_path "static/pngs/pie1.png"%>>
+			<img id='pie2' src=<%=asset_path "static/pngs/pie2.png"%>>
+			<img id='pie3' src=<%=asset_path "static/pngs/pie3.png"%>>
+			<img id='pie4' src=<%=asset_path "static/pngs/pie4.png"%>>
+			<img id='pie5' src=<%=asset_path "static/pngs/pie5.png"%>>
+			<img id='pie6' src=<%=asset_path "static/pngs/pie6.png"%>>
 		</div>
 		</div>
 		<div id='aspects'>
@@ -220,8 +220,8 @@
 			</div>
 		</div><a name="sec3"></a>
 		<div id='bauble-container'>
-			<img id="bauble" src="img/pngs/bauble.png"><br>
-			<img id="logo" src="img/pngs/logo.png">
+			<img id="bauble" src=<%=asset_path "static/pngs/bauble.png"%>><br>
+			<img id="logo" src=<%=asset_path "static/pngs/logo.png"%>>
 		</div>		
 		<div id='users-container'>
 		<div id="users">
@@ -264,23 +264,23 @@
 		<div id="database-wrapper">
 			<div id="user-sprites">				
 				<div id='u1-wrapper' class='uwrap'>
-					<img id='c1' class='check' src="img/pngs/checkbox.png"><br>
-					<img class='greyuser' src="img/pngs/user.png">
+					<img id='c1' class='check' src=<%=asset_path "static/pngs/checkbox.png"%>><br>
+					<img class='greyuser' src=<%asset_path "static/pngs/user.png"%>>
 				</div>
 				<div id='u2-wrapper' class='uwrap'>
-					<img id='c2' class='check' src="img/pngs/checkbox.png"><br>
-					<img class='greyuser' src="img/pngs/user.png">
+					<img id='c2' class='check' src=<%=asset_path "static/pngs/checkbox.png"%>><br>
+					<img class='greyuser' src=<%=asset_path "static/pngs/user.png"%>>
 				</div>				
 				<div id='u3-wrapper' class='uwrap'>
-					<img id='theone' src="img/pngs/user.png">
+					<img id='theone' src=<%=asset_path "static/pngs/user.png"%>>
 				</div>				
 				<div id='u4-wrapper' class='uwrap'>
-					<img id='c3' class='check' src="img/pngs/checkbox.png"><br>
-					<img class='greyuser' src="img/pngs/user.png">
+					<img id='c3' class='check' src=<%=asset_path "static/pngs/checkbox.png"%>><br>
+					<img class='greyuser' src=<%=asset_path "static/pngs/user.png"%>>
 				</div>				
 				<div id='u5-wrapper' class='uwrap'>
-					<img id='c4' class='check' src="img/pngs/checkbox.png"><br>
-					<img class='greyuser' src="img/pngs/user.png">
+					<img id='c4' class='check' src=<%=asset_path "static/pngs/checkbox.png"%>><br>
+					<img class='greyuser' src=<%=asset_path "static/pngs/user.png"%>>
 				</div>
 			</div>			
 			<div id="compare-text">
@@ -288,8 +288,8 @@
 				</div>
 		<div id='clock-wrapper'>
 			<div id='bobnclock'>
-				<img src="img/pngs/rbauble.png"><br>
-				<img id='clock' src="img/pngs/clock.png">
+				<img src=<%=asset_path "static/pngs/rbauble.png"%>><br>
+				<img id='clock' src=<%=asset_path "static/pngs/clock.png"%>>
 			</div>
 			<div id='update-text'>
 				The database is dynamically <br>
@@ -306,10 +306,10 @@
 				<div id='costs' class='txt'>
 					Costs
 				</div>
-				<img id='l1' src="img/pngs/line1.png">
-				<img id='l2' src="img/pngs/line2.png">
-				<img id='l3' src="img/pngs/line3.png">
-				<img id='l4' src="img/pngs/line5.png">
+				<img id='l1' src=<%=asset_path "static/pngs/line1.png"%>>
+				<img id='l2' src=<%=asset_path "static/pngs/line2.png"%>>
+				<img id='l3' src=<%=asset_path "static/pngs/line3.png"%>>
+				<img id='l4' src=<%=asset_path "static/pngs/line5.png"%>>
 			</div>
 			<div id='sustainability-box'>
 				<div id='level' class='txt'>
@@ -328,9 +328,9 @@
 				<div id='expenditure' class='txt'>
 					Expenditure
 				</div>
-				<img id='w1' src="img/pngs/warning.png">
-				<img id='w2' src="img/pngs/warning.png">
-				<img id='w3' src="img/pngs/warning.png">
+				<img id='w1' src=<%=asset_path "static/pngs/warning.png"%>>
+				<img id='w2' src=<%=asset_path "static/pngs/warning.png"%>>
+				<img id='w3' src=<%=asset_path "static/pngs/warning.png"%>>
 			</div>
 		</div>
 		<div id='report-description-wrapper'>
@@ -359,13 +359,13 @@
 		<div id='right-wrapper'>
 			<div id='contactbuttons'>
 				<a href="">
-					<div id='twitter'><img id='tweet'src="img/pngs/twitter.png"></div>
+					<div id='twitter'><img id='tweet'src=<%=asset_path "static/twitter.png"%>></div>
 				</a><br>
 				<a href="">
-					<div id='facebook'><img id='eff' src="img/pngs/facebook.png"></div>
+					<div id='facebook'><img id='eff' src=<%=asset_path "static/facebook.png"%>></div>
 				</a><br>
 				<a href="">
-					<div id='google'><img id='plex' src="img/pngs/google.png"></div>
+					<div id='google'><img id='plex' src=<%=asset_path "static/google.png"%>></div>
 				</a>
 			</div>
 		</div>
@@ -373,7 +373,7 @@
 			<div id='signup'>
 				<a href="http://www.washcost.info">
 					<div id='interested'>
-						<img src="img/pngs/WClong.png">
+						<img src=<%=asset_path "static/WClong.png"%>>
 					</div>
 				</a>
 			</div>
@@ -385,14 +385,14 @@
 	</div>
 <!--end #content wrapper  -->
 </div>
-	<script type="text/javascript" src="js/TweenMax.js"></script>
+	<script type="text/javascript" src=<%=asset_path "static/TweenMax.js"%>></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
-  	<script src="js/jquery.superscrollorama.js"></script>
-	<script src="js/washcost.bp.js"></script>
+  	<script>window.jQuery || document.write('<script src=<%=asset_path "static/jquery-1.9.1.min.js"%>><\/script>')</script>
+  	<script src=<%=asset_path "static/jquery.superscrollorama.js"%>></script>
+	<script src=<%=asset_path "static/washcost.bp.js"%>></script>
 	<!-- IE shims and input placeholder shim for IE9 and below -->
-  	<!--[if lte IE 8]><script src="js/ie-shims.js"></script><![endif]-->
-	<script src="js/placeholder.js"></script>
+  	<!--[if lte IE 8]><script src=<%=asset_path "static/ie-shims.js"%>></script><![endif]-->
+	<script src=<%=asset_path "static/placeholder.js"%>></script>
 
 
 </body>
