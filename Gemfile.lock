@@ -54,9 +54,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    capybara-webkit (1.0.0)
-      capybara (~> 2.0, >= 2.0.2)
-      json
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -102,6 +99,7 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
+    high_voltage (1.2.4)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -254,7 +252,6 @@ DEPENDENCIES
   bson_ext
   cancan
   capybara
-  capybara-webkit
   coffee-rails (~> 3.2.1)
   countries
   database_cleaner
@@ -264,6 +261,7 @@ DEPENDENCIES
   faker
   haml
   haml-rails
+  high_voltage
   jquery-rails
   jquery-ui-rails
   jquery-ui-sass-rails

@@ -58,6 +58,10 @@ WashCostApp::Application.routes.draw do
   match '/sanitation_advanced' => 'sanitation_advanced#index'
   match '/sanitation_advanced/(:action)' => 'sanitation_advanced#(:action)', :via=> [:get,:post]
 
+  match '/infographic' => 'pages#infographic', as: :static
+  match '/marketing_info' => 'pages#marketing_info', as: :static
+  match '/cal' => 'water_basic#country'
+
   get "/path" => "controller#get_action"
   post "/path" => "controller#post_action"
 

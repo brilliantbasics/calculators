@@ -31,7 +31,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'capybara' #, '~> 2.1.0'
-  gem 'capybara-webkit'
+  #gem 'capybara-webkit'
   gem 'shoulda-matchers'
   gem 'spork-rails'
   gem 'factory_girl_rails'
@@ -58,4 +58,4 @@ gem 'jquery-ui-sass-rails'
 
 gem 'countries'
 
-
+gem 'high_voltage'
