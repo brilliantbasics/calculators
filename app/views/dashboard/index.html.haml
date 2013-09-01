@@ -1,62 +1,62 @@
 .dashboard
   .row.section
     .large-2.columns
-      %img{:src => "holder.js/120x90"}
-    .large-3.columns
-      %h5
-        = current_user.name.upcase
+      %img{:src => "holder.js/140x140"}
+      = link_to edit_user_registration_path do
+        = image_tag 'setting-icon.png', class: 'setting-button'
+    .large-4.columns
+      .name
+        = current_user.name.titleize
       %p
         COMPANY:
         %strong= current_user.company.upcase
       %p
         COUNTRY:
-        %strong=  Country.new(current_user.country).data.present? ? Country.new(current_user.country).name.upcase : "NO SPECIFIED"
-    .large-3.columns
+        %strong=  Country.new(current_user.country).data.present? ? Country.new(current_user.country).name.capitalize : "NO SPECIFIED"
       %p
-        PREFERED LANGUAGE:
+        Prefered Language:
         %strong= current_user.prefered_language.upcase
       %p
-        CONTACT MAIL:
+        Contact Mail:
         %strong= current_user.email.upcase
-      = link_to 'ACCOUNT SETTINGS', edit_user_registration_path, class: 'tiny button secondary radius'
+
     .large-4.columns
       .link-container
-        = link_to 'START A BASIC CALCULATOR', root_path, class: 'tiny button secondary expand radius'
-        = link_to 'START AN ADVANCED CALCULATOR (COMING SOON)', '#', class: 'tiny button secondary expand radius'
+        = link_to 'START A BASIC CALCULATOR', root_path, class: 'large button expand button-landing-page button-landing-page-size radius centered'
+        = link_to 'START AN ADVANCED CALCULATOR (COMING SOON)', '#', class: 'large button expand button-landing-page button-landing-page-size radius'
   .row
     %br
     %br
-  .row
-    .reports-tag MY REPORTS
   .row
     .reports
       %table
-        %tr.text-left
-          %th{width: 100} TITLE
-          %th{width: 200} LOCATION
-          %th{width: 200} CALCULATOR TYPE
-          %th{width: 200} SERVICE
+        %tr.text-left.head
+          %th{width: 150} LOCATION
+          %th{width: 200} DATE
+          %th{width: 300} CALCULATOR TYPE
+          %th{width: 100} SERVICE
           %th{width: 200} FINAL REPORT
 
         - current_user.basic_questionnaires.each do |basic_questionnaire|
-          %tr
-            %td= basic_questionnaire.title.upcase
+          %tr.divisor
             %td
+              = basic_questionnaire.title.upcase
+          %tr
+            %td{valign: :middle}
               .row
                 .large-5.columns
-                  %img{:src => "holder.js/90x50"}
+                  = image_tag 'flags/blank.gif', class: "flag flag-#{basic_questionnaire.form["country"].downcase}"
                 .large-7.columns
-                  %h5= basic_questionnaire.form["country"].present? ? Country.new(basic_questionnaire.form["country"]).name.upcase : "NN"
+                  .country= basic_questionnaire.form["country"].present? ? Country.new(basic_questionnaire.form["country"]).name.truncate(13).upcase : "NN"
+            %td
+              .date
+                = basic_questionnaire.created_at
             %td
               .row
-                .large-6.columns.text-left
-                  %h5= basic_questionnaire.tool_name.upcase
-                  BASIC
-                .large-6.columns.text-center
-                  %br
-                  %p= "#{basic_questionnaire.percent_completed} % DONE"
-
+                .large-12.columns.text-left
+                  .tool_name=  "#{basic_questionnaire.tool_name.upcase} | "
+                  .percent= " BASIC TOOL (#{basic_questionnaire.percent_completed}%)"
             %td
-              %h4 INSTALLED
-            %td= link_to 'FINAL REPORT', load_basic_reports_path(id_questionnaire: basic_questionnaire.id), "data-method" => "post"
+              .service INSTALLED
+            %td= link_to 'VIEW REPORT', load_basic_reports_path(id_questionnaire: basic_questionnaire.id), "data-method" => "post", class: 'view_report'
 
