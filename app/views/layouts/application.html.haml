@@ -20,22 +20,23 @@
       .large-12.columns
     #outer_container.bgGradient
       = render "shared/header"
-    .row.main-container
-      .large-12.columns
+      .landing-container      
+        .row.main-container
+          .large-12.columns
+            .row
+              .large-12.columns
+                = render 'layouts/messages'
+            = yield
+            .washcost-popup
+              .reveal-modal.notification.subscriber
+                = render 'popups/subscriber'
+                %a.close-reveal-modal.close ×
+        #delta-resize
         .row
           .large-12.columns
-            = render 'layouts/messages'
-        = yield
-        .washcost-popup
-          .reveal-modal.notification.subscriber
-            = render 'popups/subscriber'
-            %a.close-reveal-modal.close ×
-    #delta-resize
-    .row
-      .large-12.columns
-    %footer
-      = render 'layouts/footer'
+        %footer
+          = render 'layouts/footer'
 
-.row
-  .large-8.large-offset-2.columns
+    .row
+      .large-8.large-offset-2.columns
 
