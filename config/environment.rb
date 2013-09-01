@@ -3,7 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 # App Version
 # As suggested at: http://blog.danielpietzsch.com/post/1209091430/show-the-version-number-of-your-rails-app-using-git
-SHOW_APP_VERSION = true
+SHOW_APP_VERSION = false
 APP_VERSION = `git describe --always` unless defined? APP_VERSION
 
 # Initialize the rails application
