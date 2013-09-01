@@ -2,14 +2,14 @@
 <html>
 <head>	
 	<!--Modernizr -->
-	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href=<%=asset_path "static/normalize.css"%> type="text/css">
 	<!--<script type="text/javascript" src="http://modernizr.com/downloads/modernizr-latest.js"></script>--> 		
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href=<%=asset_path "static/style.css"%> type="text/css">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<!-- JS -->
-	<script type="text/javascript" src='js/jquery.1.10.2.js'></script>
-	<script type="text/javascript" src='js/site.js'></script>
+	<script type="text/javascript" src=<%=asset_path 'static/jquery.1.10.2.js'%>></script>
+	<script type="text/javascript" src=<%=asset_path 'static/site.js'%>></script>
 </head>
 <body>
 	<div id='header'>
@@ -27,7 +27,7 @@
 			sustainable, long-lasting WASH services.</p>
 		</div>
 		<div id='video'>
-			<img id='placeholder-image' src=<%=asset_path "static/img/video.png"%>>			
+			<img id='placeholder-image' src=<%=asset_path "static/video.png"%>>			
 		</div>
 		<div id='button-wrapper'>
 			<a href=""> <!-- Link to infographic -->
@@ -50,12 +50,12 @@
 			<a href="http://www.washcost.info/">washcost.info</a><br><br>
 		</div>
 		<div id='social-buttons'>
-				<a href=""><div id='facebook'><img id='eff' src=<%=asset_path "static/img/facebook.png"%>></div></a>
-				<a href=""><div id='twitter'><img id='tweet'src=<%=asset_path "static/img/video.png"%>></div></a>				
-				<a href=""><div id='google'><img id='plex' src=<%=asset_path "static/img/google.png"%>></div></a>
+				<a href=""><div id='facebook'><img id='eff' src=<%=asset_path "static/facebook.png"%>></div></a>
+				<a href=""><div id='twitter'><img id='tweet'src=<%=asset_path "static/video.png"%>></div></a>				
+				<a href=""><div id='google'><img id='plex' src=<%=asset_path "static/google.png"%>></div></a>
 		</div>
 		<div id='irc-wrapper'>
-			<div id='ircdiv'><img id='ircimg' src="img/irc.png"></div><br>
+			<div id='ircdiv'><img id='ircimg' src=<%=asset_path "static/irc.png"%>></div><br>
 			<a href="">Privacy Statement</a><br>
 			<p>© IRC. All Rights Reserved</p>
 
