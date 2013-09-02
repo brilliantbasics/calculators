@@ -9,7 +9,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	color: white;
 	background: #b1a172;
-	background: url(../img/marketingbg.png) no-repeat center center fixed;  	
+	background: url(/assets/static/marketingbg.png) no-repeat center center fixed;  	
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
