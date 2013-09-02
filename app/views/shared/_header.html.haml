@@ -10,8 +10,6 @@
       %ul.languageSwitcher
         %li
           %a.active{:href => "?lang=en"} English
-        %li
-          %a{:href => "?lang=fr"} Français
     %li
       - if user_signed_in?
         = link_to "Hi #{current_user.name}", dashboard_index_path, class: 'sign'
