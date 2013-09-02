@@ -44,10 +44,16 @@
           %tr
             %td{valign: :middle}
               .row
-                .large-5.columns
-                  = image_tag 'flags/blank.gif', class: "flag flag-#{basic_questionnaire.form["country"].downcase}"
-                .large-7.columns
-                  .country= basic_questionnaire.form["country"].present? ? Country.new(basic_questionnaire.form["country"]).name.truncate(13).upcase : "NN"
+                - if basic_questionnaire.form["country"].present?
+                  .large-3.columns
+                    .flag{class: "flag-#{basic_questionnaire.form["country"].downcase}"}
+                  .large-9.columns
+                    .country= Country.new(basic_questionnaire.form["country"]).name.truncate(13).upcase
+                -else
+                  .large-3.columns
+                    .flag
+                  .large-9.columns
+                    .country NN
             %td
               .date
                 = basic_questionnaire.created_at
