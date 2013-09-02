@@ -85,7 +85,6 @@ a:link, a:visited {
 	#button-wrapper {
 		text-align: center;
 		white-space: nowrap;
-		z-index: -1;
 		}
 		#learnmore, #c-trybutton {
 			display: inline-block;

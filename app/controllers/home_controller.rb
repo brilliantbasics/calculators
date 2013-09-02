@@ -17,7 +17,8 @@ class HomeController < ApplicationController
       when 2
         redirect_to cal_sanitation_basic_path
       else
-        redirect_to root_path, flash: { popup_class_name: '.notification.subscriber' }
+        #redirect_to root_path, flash: { popup_class_name: '.notification.subscriber' }
+        redirect_to 'http://blog.washcost.org/washcost-calculator-advanced/'
     end
   end
 
