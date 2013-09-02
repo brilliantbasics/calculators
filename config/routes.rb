@@ -62,7 +62,7 @@ WashCostApp::Application.routes.draw do
   match '/marketing_info' => 'pages#marketing_info', as: :static
   match '/mobile' => 'pages#mobile', as: :static
   match '/cal' => 'home#index'
-  match "/blog" => redirect("http://google.com/blog"), :as => :blog
+  match "/blog" => redirect("http://blog.washcost.org/blog"), :as => :blog
 
   get "/path" => "controller#get_action"
   post "/path" => "controller#post_action"
