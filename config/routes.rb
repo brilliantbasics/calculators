@@ -59,6 +59,7 @@ WashCostApp::Application.routes.draw do
   match '/sanitation_advanced/(:action)' => 'sanitation_advanced#(:action)', :via=> [:get,:post]
 
   match '/infographic' => 'pages#infographic', as: :static
+  match '/infographic/mobile' => 'pages#infographic_mobile', as: :static
   match '/marketing_info' => 'pages#marketing_info', as: :static
   match '/mobile' => 'pages#mobile', as: :static
   match '/cal' => 'home#index'
